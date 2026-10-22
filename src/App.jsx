@@ -1,8 +1,13 @@
+import { Routes, Route } from "react-router-dom";
+import Gallery from "./gallery";
+import Detail from "./detail";
+
 function App() {
   return (
-    <div className="container py-4">
-      <h1>Entertainment Gallery</h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<Gallery />} />
+      <Route path="/series/:id" element={<Detail />} />
+    </Routes>
   );
 }
 
